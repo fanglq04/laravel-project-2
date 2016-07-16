@@ -40,8 +40,7 @@ class EntrustSetupTables extends Migration
             $table->string('display_name')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
-            $table->increments('cid');
-            $table->strng('icon')->nullable();
+            $table->string('icon')->nullable();
         });
 
         // Create table for associating permissions to roles (Many-to-Many)

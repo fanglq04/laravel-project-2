@@ -24,4 +24,23 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+
+    /**
+     * 用户与机构一对一关系
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function organization()
+    {
+        return $this->hasOne('App\Models\Organization');
+    }
+
+
+    /**
+     * 用户与个人一对一关系
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function personal()
+    {
+        return $this->hasOne('App\Models\Personal');
+    }
 }

@@ -9,7 +9,6 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" />
@@ -17,7 +16,7 @@
 
     <style>
         body {
-            font-family: 'Lato';
+            font-family: 'microsoft yahei';
         }
 
         .fa-btn {
@@ -47,7 +46,12 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}">首页</a></li>
+                    <li><a href="{{ url('/home') }}">婴儿</a></li>
+                    <li><a href="{{ url('/home') }}">幼儿</a></li>
+                    <li><a href="{{ url('/home') }}">学龄前</a></li>
+                    <li><a href="{{ url('/home') }}">小学</a></li>
+                    <li><a href="{{ url('/home') }}">中学</a></li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->

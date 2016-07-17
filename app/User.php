@@ -43,4 +43,14 @@ class User extends Authenticatable
     {
         return $this->hasOne('App\Models\Personal');
     }
+
+
+    /**
+     * 用户与分类多对多关系
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function categorys()
+    {
+        return $this->belongsToMany('App\Models\Category');
+    }
 }

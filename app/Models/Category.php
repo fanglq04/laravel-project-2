@@ -7,20 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     /**
-     * 分类与机构定义多对多关系
+     * 分类与用户多对多关系
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
-    public function organizations()
+    public function users()
     {
-        return $this->belongsToMany('App\Models\Organization');
+        return $this->belongsToMany('App\User');
     }
 
-
-    /**
-     * 分类与个人定义多对多关系
-     */
-    public function personals()
-    {
-        return $this->belongsToMany('App\Models\Personal');
-    }
 
 }

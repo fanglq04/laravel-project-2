@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => 'admin',
+        'guard' => 'web',
         'passwords' => 'users',
     ],
 
@@ -48,7 +48,7 @@ return [
 
         'admin'=>[
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'admin_users',
         ],
     ],
 
@@ -71,6 +71,11 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
+            'model' => App\User::class
+        ],
+
+        'admin_users' => [
+            'driver' => 'eloquent',
             'model' => App\Models\AdminUser::class,
         ],
 
@@ -80,7 +85,7 @@ return [
         // ],
     ],
 
-    'model'=> 'App\Models\AdminUser',
+//    'model'=> 'App\Models\AdminUser',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,6 +113,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+
+        'admin_users' => [
+            'provider' => 'users',
+            'email' => 'auth.emails.password',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ]
     ],
 
 ];

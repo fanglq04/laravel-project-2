@@ -18,7 +18,14 @@ Route::get('/home',function(){
     return view('welcome');
 });
 
-Route::get('admin/index', ['as' => 'admin.index', 'middleware' => ['auth','menu'], 'uses'=>'Admin\\IndexController@index']);
+Route::get('admin/index', [
+    'as' => 'admin.index',
+    'middleware' => [
+        'auth',
+        'menu'
+    ],
+    'uses'=>'Admin\\IndexController@index'
+]);
 
 $this->group(['namespace' => 'Admin','prefix' => '/admin',], function () {
     Route::auth();
